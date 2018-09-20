@@ -1,0 +1,19 @@
+"Para todo problema complexo existe sempre uma solução simples, elegante e completamente errada."
+
+outDir => pasta para onde os arquivos .js vão
+tsc -w => para o typescript assistir as configurações do tsconfig.json
+
+exportando arquivos js = em um mesmo arquivo, pode se exporta varias coisas, como a class 
+* export class pessoa { }
+ou uma constante
+* export const sobrenome { }
+ai no arquivo que esta se chamando, é so referenciar os dados que se deseja usar
+* import { pessoa, sobrenome } from './pessoa' (no caso do nome do arquivo ser pessoa.ts'
+além desta exportação, pode-se definir também o 'export default', só se pode ter uma exportação default
+* 'export default class Pessoa'
+ a importação de um dado default, é feito fora do { } ficando por exemplo:
+import Pessoa, { sobrenome } from './Pessoa'
+
+quando se tem um import com extends (herança), no construtor de classes derivadas(filhas) deve-se chamar o super(), a função super ajusta o contexto das variáveis. pq a implementação da classe ocorre através de prototype.
+quando você define como private, não se consegue fazer a alteração direta na classe filha.
+para resolver essa questão, deve-se setar as variáveis com 'protected', que é semelhante ao private, a diferença é que ele permite que as classes filhas façam essas alterações nas variaveis.
