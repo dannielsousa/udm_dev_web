@@ -1,11 +1,11 @@
-export interface DaoInterface {
+export interface DaoInterface<T> {
     
     nomeTabela: string;
 
-    insterir(object: any): boolean;
-    atualizar(object: any): boolean;
-    remover(id: number): any;
-    selecionar(id: number): any;
-    selecionarTotos(): [any];
+    insterir(object: T): boolean;
+    atualizar(object: T): boolean;
+    remover(id: number): T;
+    selecionar(id: number): T;
+    selecionarTotos(): [T];
 
 }

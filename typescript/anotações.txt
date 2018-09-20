@@ -17,3 +17,7 @@ import Pessoa, { sobrenome } from './Pessoa'
 quando se tem um import com extends (herança), no construtor de classes derivadas(filhas) deve-se chamar o super(), a função super ajusta o contexto das variáveis. pq a implementação da classe ocorre através de prototype.
 quando você define como private, não se consegue fazer a alteração direta na classe filha.
 para resolver essa questão, deve-se setar as variáveis com 'protected', que é semelhante ao private, a diferença é que ele permite que as classes filhas façam essas alterações nas variaveis.
+
+Generics
+permite que componentes, classes ou  objetos sejam reutilizados.
+Para instanciar uma classe generic, deve passar o tipo no export da classe

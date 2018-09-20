@@ -1,14 +1,16 @@
-import { PessoaDao } from './PessoaDao';
+//import { PessoaDao } from './PessoaDao';
+//import { ConcessionariaDao } from './ConessionariaDao';
+
+import { Dao } from './Dao';
 import { Concessionaria } from './Concessionaria';
-import { ConcessionariaDao } from './ConessionariaDao';
 import { Pessoa } from './Pessoa';
 
-let dao : ConcessionariaDao = new ConcessionariaDao(); 
+//let dao : ConcessionariaDao = new ConcessionariaDao(); 
+//let dao2: PessoaDao = new PessoaDao();
+
+let dao3: Dao<Concessionaria> = new Dao<Concessionaria>();
+
 let concessionaria = new Concessionaria('', []);
+let pessoa: Pessoa = new Pessoa('','')
 
-dao.insterir(concessionaria);
-
-let dao2: PessoaDao = new PessoaDao();
-let pessoa: Pessoa = new Pessoa('','');
-
-dao2.atualizar(pessoa);
+dao3.insterir(concessionaria);
